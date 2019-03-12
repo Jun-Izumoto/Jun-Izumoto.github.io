@@ -1,4 +1,9 @@
 /* 共通のレイアウト */
+*{
+  box-sizing:border-box;
+}
+
+
 body {
   font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
   margin:0;
@@ -15,7 +20,7 @@ a {
 }
 
 .container{
-  max-width:1100px;
+  max-width:100%;
   margin:0 auto;
   padding:0 20px;
 }
@@ -58,12 +63,29 @@ header{
   padding:0 15px;
 }
 
+@media(max-width:850px){
+  header li{
+      display:none;
+    }
+
+  header{
+    height:120px;
+  }
+}
+
+
 /*top*/
 .top{
   height: 1000px;
-  background-image: url(top.png);
+  background-image: url(image/main_visual.jpg);
   background-size:cover;
   opacity: 0.7;
+}
+
+@media(max-width:850px){
+  .top h1{
+    font-size:32px;
+  }
 }
 
 
@@ -77,19 +99,43 @@ header{
   width:80%;
   display: inline-block;
   font-size: 18px;
+  text-align: left;
 }
 
+@media(max-width:850px){
+  .service-content{
+    flex-flow:column;
+  }
 
+  .service-content p{
+    width:70%;
+    text-align: left;
+  }
+}
 
 
 /*portfolio*/
 .portfolio{
   text-align: center;
+  background-color: #f7f7f7;
 }
 
 .slide li{
   float:left;
   width:25%;
+}
+
+@media(max-width:1000px){
+  .slide li{
+    width:50%;
+  }
+}
+
+@media(max-width:670px){
+  .slide li{
+    width:100%;
+    padding:10px 10px 10px 0;
+  }
 }
 
 .btn{
@@ -100,7 +146,13 @@ header{
     border-radius: 5px;
     box-shadow: 0 0px 20px rgba(0,0,0,0.7);
     font-weight: bold;
-    margin-top: 15px;
+    margin: 30px 0;
+}
+
+@media(max-width:670px){
+  .btn{
+    width:100%;
+  }
 }
 
 .btn:hover{
@@ -113,6 +165,7 @@ header{
 /*About*/
 .about{
   margin-bottom: 120px;
+
 }
 
 .about img{
@@ -125,8 +178,16 @@ header{
   padding:0px 40px 0px 40px;
 }
 
-/*Contact*/
+@media(max-width:850px){
+.about-content{
+      flex-flow:column;
+    }
+}
 
+/*Contact*/
+.contact-form{
+  padding:100px 0 100px 100px;
+}
 
 
 /*footer*/
