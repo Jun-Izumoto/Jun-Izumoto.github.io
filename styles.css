@@ -152,14 +152,8 @@ ul .slide{
   padding-left: 0;
 }
 
-@media(max-width:1000px){
-  .slide li{
-    width:50%;
-    padding-left: 30px;
-  }
-}
 
-@media(max-width:670px){
+@media(max-width:900px){
   .slide li{
     width:100%;
     padding:10px 30px 10px 0;
